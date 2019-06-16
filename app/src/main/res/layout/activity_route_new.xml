@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/forumlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_backcolor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:onClick="onBackActivity"
+                android:padding="5dp"
+                app:srcCompat="@drawable/back_icon_selector" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:contentDescription="@android:string/dialog_alert_title"
+                android:gravity="center_vertical"
+                android:text="@string/title_newroute"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:text="@string/button_post"
+                android:textAlignment="center"
+                android:textColor="@drawable/undertext_selector"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jis.coommunity.components.AddImageView
+                android:id="@+id/route_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"></com.jis.coommunity.components.AddImageView>
+
+            <EditText
+                android:id="@+id/edit_placename"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/background_light"
+                android:hint="@string/add_placename"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColorHint="@android:color/background_dark"
+                android:textCursorDrawable="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_placeaddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_light"
+                android:hint="@string/add_placeaddress"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColorHint="@android:color/background_dark"
+                android:textCursorDrawable="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/map_panel"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <fragment
+                    android:id="@+id/small_map"
+                    class="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/place_position"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginRight="330dp"
+                    app:srcCompat="@drawable/position_icon" />
+
+                <ImageView
+                    android:id="@+id/btn_largemap"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:onClick="onLargeMapActivity"
+                    app:srcCompat="@drawable/map_large_icon" />
+            </FrameLayout>
+
+
+            <EditText
+                android:id="@+id/edit_information"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_light"
+                android:hint="@string/add_info"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColorHint="@android:color/background_dark"
+                android:textCursorDrawable="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_light"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:imeOptions="actionUnspecified"
+                    android:keyboardNavigationCluster="false"
+                    android:orientation="horizontal"
+                    android:textColorHint="@android:color/black"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tag_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="?attr/colorBackgroundFloating"
+                        android:gravity="center_vertical"
+                        android:hint="Add Tags"
+                        android:imeOptions="normal"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textColorHighlight="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textCursorDrawable="@android:color/holo_blue_bright"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <com.wefika.flowlayout.FlowLayout
+                    android:id="@+id/tags_flowlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layoutDirection="ltr">
+
+                </com.wefika.flowlayout.FlowLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_light"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/select_community"
+                    android:textColor="@android:color/black" />
+
+                <com.jis.coommunity.components.CommunityView
+                    android:id="@+id/community"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"></com.jis.coommunity.components.CommunityView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

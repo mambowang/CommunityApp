@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:src="@drawable/user_photo" />
+
+    <LinearLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/photo"
+            android:layout_toRightOf="@+id/photo"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="Lia Shelton"
+            android:textColor="#040404"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:text="Audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam. Reque blandit qui eu, cu vix nonumy volumus. "
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/comment_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:text="3h"
+            android:textColor="#363636"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:srcCompat="@color/map_marker_border_color" />
+    </LinearLayout>
+</LinearLayout>

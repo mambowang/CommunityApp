@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="sports">
+    <item>Sport</item>
+    <item></item>
+    <item></item>
+    <item></item>
+    <item></item>
+  </string-array>
+  <string-array name="pop_menu">
+    <item>Follow</item>
+    <item>Share</item>
+    <item>Report</item>
+  </string-array>
+</resources>

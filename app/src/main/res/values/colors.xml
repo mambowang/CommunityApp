@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4d4dd4</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#f7f7f8</color>
+    <color name="whiteback">#ffffff</color>
+    <color name="grey">#f7f7f8</color>
+	<color name="normal_black">#363636</color>
+	<!--  community-color-->
+	<color name="community_agora">#00acef</color>
+	<color name="community_welcome">#d91159</color>
+	<color name="community_art">#ec008b</color>
+	<color name="community_design">#f8a62a</color>
+	<color name="community_fashion">#f57b71</color>
+	<color name="community_finance">#e1d505</color>
+	<color name="community_kitchen">#fb1560</color>
+	<color name="community_literature">#225974</color>
+	<color name="community_music">#d91159</color>
+	<color name="community_nature">#3fbb69</color>
+	<color name="community_health">#ec1b24</color>
+	<color name="community_cinema">#8d188e</color>
+	<color name="community_theater">#9b1560</color>
+	<color name="community_travel">#3871c1</color>
+	<color name="community_architecture">#f04523</color>
+	<color name="community_sport">#36ab9c</color>
+	<color name="community_science">#24255d</color>
+	<!--  detail-->
+	<color name="more_color">#707070</color>
+	<color name="largemap_tabback_color">#f7f7f8</color>
+	<color name="selecttabtext_color">#585bd3</color>
+
+	<color name="home_tabback_color">#f7f7f7</color>
+	<color name="home_tabtint_color">#664ad3</color>
+	<color name="home_normaltabtext_color">#00d3f1</color>
+	<color name="statusbar_color">#54d0f5</color>
+	<color name="map_marker_border_color">#cccccc</color>
+	<color name = "project_backcolor">#54d0f5</color>
+</resources>

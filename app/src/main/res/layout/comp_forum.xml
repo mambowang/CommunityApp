@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/userforumlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <com.jis.coommunity.components.UserStatusbar
+        android:id="@+id/user_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.jis.coommunity.components.UserStatusbar>
+
+    <com.jis.coommunity.components.PostGallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="281dp"
+        android:contentDescription="@android:string/search_go"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/gallery1">
+
+    </com.jis.coommunity.components.PostGallery>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jis.coommunity.components.ExComments
+            android:id="@+id/ex_com"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/background_light">
+
+        </com.jis.coommunity.components.ExComments>
+
+
+    </FrameLayout>
+
+</LinearLayout>

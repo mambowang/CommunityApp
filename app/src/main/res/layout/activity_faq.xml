@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/forumlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/project_backcolor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:onClick="onBackActivity"
+                android:padding="5dp"
+                app:srcCompat="@drawable/back_icon_selector" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:contentDescription="@android:string/dialog_alert_title"
+                android:gravity="center_vertical"
+                android:text="@string/label_faq"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textColor="@drawable/undertext_selector"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:text="@string/faq_qs" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/faq_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            app:layoutManager="LinearLayoutManager" />
+
+    </LinearLayout>
+</LinearLayout>

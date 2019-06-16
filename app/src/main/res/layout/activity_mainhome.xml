@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/forumlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#54d0f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="27dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:contentDescription="user_icon"
+                android:onClick="onLoginActivity"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                app:srcCompat="@drawable/user_icon" />
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="94dp"
+                android:layout_height="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:layout_weight="1"
+                android:contentDescription="@android:string/dialog_alert_title"
+                app:srcCompat="@drawable/app_name" />
+
+            <ImageView
+                android:id="@+id/viewMode_icon"
+                android:layout_width="25dp"
+                android:layout_height="19dp"
+                android:layout_alignTop="@+id/btn_search"
+                android:layout_marginRight="9dp"
+                android:layout_toLeftOf="@+id/btn_search"
+                android:layout_toStartOf="@+id/btn_search"
+                android:layout_weight="1"
+                android:onClick="changeViewMode"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/list_icon" />
+
+            <ImageView
+                android:id="@+id/btn_search"
+                android:layout_width="29dp"
+                android:layout_height="19dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:contentDescription="@android:string/search_go"
+                android:onClick="onSearchActivity"
+                android:paddingLeft="10dp"
+                app:srcCompat="@drawable/search_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TabHost
+        android:id="@+id/home_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f8f7f6"
+                android:divider="@android:color/transparent"
+                android:dividerPadding="0dp" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/forum_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layoutManager="LinearLayoutManager" />
+
+                        <ImageView
+                            android:id="@+id/btn_plus"
+                            android:layout_width="61dp"
+                            android:layout_height="61dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginRight="12dp"
+                            android:scaleType="fitXY"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/btn_plus" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <FrameLayout
+                            android:id="@+id/spot_map_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <fragment
+                                android:id="@+id/spot_large_map"
+                                class="com.google.android.gms.maps.MapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/btn_spot_plus"
+                                android:layout_width="61dp"
+                                android:layout_height="61dp"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginRight="12dp"
+                                android:onClick="onNewSpotActivity"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/btn_plus" />
+                        </FrameLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/spot_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/background_light"
+                            app:layoutManager="LinearLayoutManager" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <FrameLayout
+                            android:id="@+id/event_map_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <fragment
+                                android:id="@+id/event_large_map"
+                                class="com.google.android.gms.maps.MapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/btn_event_plus"
+                                android:layout_width="61dp"
+                                android:layout_height="61dp"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginRight="12dp"
+                                android:onClick="onNewEventActivity"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/btn_plus" />
+                        </FrameLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/event_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/background_light"
+                            app:layoutManager="LinearLayoutManager" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <FrameLayout
+                            android:id="@+id/map_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <fragment
+                                android:id="@+id/route_large_map"
+                                class="com.google.android.gms.maps.MapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+
+                            <ImageView
+                                android:id="@+id/btn_map_plus"
+                                android:layout_width="61dp"
+                                android:layout_height="61dp"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginRight="12dp"
+                                android:onClick="onNewRouteActivity"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/btn_plus" />
+                        </FrameLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/route_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/background_light"
+                            app:layoutManager="LinearLayoutManager" />
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

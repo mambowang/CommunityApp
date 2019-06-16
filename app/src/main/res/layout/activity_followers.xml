@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forumlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_backcolor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/project_backcolor"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:onClick="onBackActivity"
+                android:padding="5dp"
+                app:srcCompat="@drawable/back_icon_selector" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:contentDescription="@android:string/dialog_alert_title"
+                android:gravity="center_vertical"
+                android:text="@string/label_followers"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textColor="@drawable/undertext_selector"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_rounded"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/btn_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/black_search_icon" />
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/btn_search"
+                android:layout_toRightOf="@+id/btn_search"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:hint="@string/label_search"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/followers_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager" />
+    </LinearLayout>
+
+</LinearLayout>

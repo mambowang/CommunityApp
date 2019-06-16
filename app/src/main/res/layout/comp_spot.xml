@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <com.jis.coommunity.components.UserStatusbar
+        android:id="@+id/user_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.jis.coommunity.components.UserStatusbar>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="176dp" />
+
+
+    <com.jis.coommunity.components.PostGallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:contentDescription="@android:string/search_go"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/gallery1" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/background_light"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/imageView32"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/favorite_selector" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_favorite_label"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/imageView33"
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hbeen_selector" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_hbeen_label"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/imageView34"
+                android:layout_width="12dp"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/want_selector" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_want_label"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.jis.coommunity.components.ExComments
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
